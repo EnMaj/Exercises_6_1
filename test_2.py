@@ -8,9 +8,7 @@ for i in range(n):
 print(count_courses)"""
 
 n = int(input())
-courses = []
+courses = set()
 for i in range(n):
-    courses_student = list(map(str, input().split(" ")))
-    courses+=courses_student
-courses = set(courses)
+    courses.update(set(map(str, input().split(" "))))
 print(len(courses))
